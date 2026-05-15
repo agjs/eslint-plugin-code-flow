@@ -18,7 +18,8 @@ export const preferEarlyReturnRule = createRule<[], MessageIds>({
     type: "problem",
     docs: {
       description:
-        "Prefer guard clauses (early return) over wrapping the function body in a multi-statement `if` without an `else`."
+        "Prefer guard clauses (early return) over wrapping the function body in a multi-statement `if` without an `else`.",
+      recommended: true
     },
     schema: [],
     messages: {

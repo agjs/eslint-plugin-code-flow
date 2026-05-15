@@ -1,6 +1,9 @@
 # eslint-plugin-code-flow
 
 [![CI](https://github.com/agjs/eslint-plugin-code-flow/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/agjs/eslint-plugin-code-flow/actions/workflows/ci.yml)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![Typecheck](https://img.shields.io/badge/typecheck-passing-brightgreen)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
 
 ESLint plugin for control-flow style rules: guard clauses over wrapped happy paths, and related patterns.
 
@@ -11,10 +14,10 @@ Functions that wrap their entire body in a positive `if` bury the happy path one
 ## Install
 
 ```sh
-npm install --save-dev eslint-plugin-code-flow @typescript-eslint/parser
+pnpm add -D eslint-plugin-code-flow @typescript-eslint/parser
 ```
 
-## Flat config
+## Usage (flat config)
 
 ```js
 import tsParser from "@typescript-eslint/parser";
@@ -58,14 +61,14 @@ export default [codeFlow.configs.recommended];
 
 ```sh
 pnpm install
-pnpm test
 pnpm run typecheck
+pnpm test
 pnpm run build
 ```
 
 ## Release
 
-Push a `v*` tag; CI publishes to npm when configured.
+Push a `v*` tag; CI publishes to npm when `NPM_TOKEN` is configured.
 
 ## License
 

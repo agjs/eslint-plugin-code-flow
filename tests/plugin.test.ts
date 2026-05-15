@@ -61,4 +61,12 @@ describe("rule meta integrity", () => {
     }
   });
 
+  it("every rule is marked as recommended", () => {
+    for (const [name, rule] of Object.entries(rules)) {
+      expect(
+        (rule.meta.docs as { recommended?: boolean } | undefined)?.recommended,
+        `${name}: meta.docs.recommended should be true`
+      ).toBe(true);
+    }
+  });
 });
